@@ -56,10 +56,10 @@ const settingsUrl = "chrome://os-settings";
 
 function files() {
     console.log("files");
-    chrome.tabs.create({url: filesUrl});
+    chrome.tabs.create({url: "chrome://file-manager"});
 }
 
 function settings() {
     console.log("settings");
-    chrome.tabs.create({url: settingsUrl});
+    chrome.tabs.create({url: "chrome://os-settings"});
 }
