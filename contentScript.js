@@ -51,9 +51,6 @@ function showTime() {
  
 showTime();
 
-const filesUrl = "chrome://file-manager";
-const settingsUrl = "chrome://os-settings";
-
 function files() {
     console.log("files");
     chrome.tabs.create({url: "chrome://file-manager"});
