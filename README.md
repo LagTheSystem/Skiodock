@@ -1,5 +1,6 @@
 # Skiodock
-A chrome extension designed to be used with the [Chromebook Skiovox Exploit](https://github.com/3kh0/ext-remover?tab=readme-ov-file#skiovox-unrestricted-browsing) that aims to replicate the original ChromeOS dock
+A chrome extension designed to be used with the [Chromebook Skiovox Exploit](https://github.com/3kh0/ext-remover?tab=readme-ov-file#skiovox-unrestricted-browsing) that aims to replicate the original ChromeOS dock. 
+It works by embedding extra HTML, CSS, and JS into every page you visit that is designed to look like the ChromeOS dock.
 
 **This extension is a work in progress and is in a VERY buggy state**
 
