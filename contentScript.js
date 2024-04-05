@@ -6,14 +6,20 @@ document.body.innerHTML += '<div id=dock><div id=launcher><div id=openBtn class=
 
 inject();
 
+// def didn't copy half of this code off the internet
+setInterval(updateDock, 100);
+document.addEventListener("mousemove", mouseUpdate)
 
-// Calling showTime function at every second
-setInterval(showTime, 1000);
+function mouseUpdate() {
+    if (event.clientY >= (window.innerHeight - 45)) {
+        document.getElementById("dock").style.bottom = "0";
+    } else {
+        document.getElementById("dock").style.bottom = "-60px";
+    }
+}
 
-// Defining showTime funcion
-function showTime() {
-    console.log("updated time");
-    // Getting current time and date
+
+function updateDock() {
     let time = new Date();
     let month = time.getMonth();
     let date = time.getDate();
@@ -24,7 +30,6 @@ function showTime() {
     time.setMonth(month);
     month = time.toLocaleString('en-US', { month : 'short' })
   
-    // Setting time for 12 Hrs format
     if (hour >= 12) {
         if (hour > 12) hour -= 12;
     } else if (hour == 0) {
@@ -44,19 +49,19 @@ function showTime() {
   
     let currentDate = month + " " + date
  
-    // Displaying the time
- document.getElementById("clock").innerHTML = currentTime;
-  document.getElementById("calendar").innerHTML = currentDate;
+    document.getElementById("clock").innerHTML = currentTime;
+    document.getElementById("calendar").innerHTML = currentDate;
 }
  
-showTime();
+updateDock();
+
+const filesUrl = "chrome://file-manager";
+const settingsUrl = "chrome://os-settings";
 
 function files() {
-    console.log("files");
-    chrome.tabs.create({url: "chrome://file-manager"});
+    chrome.tabs.create("chrome://file-manager");
 }
 
 function settings() {
-    console.log("settings");
-    chrome.tabs.create({url: "chrome://os-settings"});
+    chrome.tabs.create("chrome://os-settings");
 }
