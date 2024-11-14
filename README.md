@@ -1,4 +1,8 @@
 # Skiodock
+
+## This project is shelved
+Skiovox was patched after ChromeOS 118, so unless it comes back in the future, this project will not continue. I'm not going to be archiving it, so if you still want to open a pull request, you can.
+
 A chrome extension designed to be used with the [Chromebook Skiovox Exploit](https://github.com/3kh0/ext-remover?tab=readme-ov-file#skiovox-unrestricted-browsing) that aims to replicate the original ChromeOS dock. 
 It works by embedding extra HTML, CSS, and JS into every page you visit that is designed to look like the ChromeOS dock.
 
